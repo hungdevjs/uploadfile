@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Personal Cloud Database</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="alert alert-primary fade" role="alert" id="alertSuccess">
+    </div>
+
+    <div class="alert alert-danger fade" role="alert" id="alertFail">
+    </div>
+
+    <div class="container">
+        <h5>Personal Clound DB</h5>
+
+        <div class="progress d-none mb-2" style="height: 16px; width: 500px">
+            <div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                <span id="current-progress"></span>
+            </div>
+        </div>
+
+        <input type="file" value="upload" id="fileButton" class="mb-2" />
+
+        <div id="content" style="max-width: 100%">
+
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-storage.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD53v428eSI8K6NSw1TPhBGEDEHDXSmodY",
+            authDomain: "upload-file-a6fb0.firebaseapp.com",
+            databaseURL: "https://upload-file-a6fb0.firebaseio.com",
+            projectId: "upload-file-a6fb0",
+            storageBucket: "upload-file-a6fb0.appspot.com",
+            messagingSenderId: "1093161046598",
+            appId: "1:1093161046598:web:2aeeb3e538b978a4d03047"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./upload.js"></script>
+</body>
+
+</html>
